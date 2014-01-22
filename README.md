@@ -37,3 +37,15 @@ event manager directory user policy "flash:/"
 .Jan 22 16:01:56: %HA_EM-6-LOG: afraid6.tcl: freedns.afraid.org DDNS response: Updated 2 host(s) ipv6.example.org,
 ipv4.example.org in 0.041 seconds
 ```
+
+"Remind me again why i need all this mess on my hands?"
+Relax, all this will become obsolete when freedns.afraid.org will be reachable over v6. Then you'll only need to "GET" the secret update URL.
+
+```
+No quad-A record yet.
+
+$ dig +short a freedns.afraid.org
+204.140.20.22
+$ dig +short aaaa freedns.afraid.org
+$
+```
