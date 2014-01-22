@@ -3,7 +3,7 @@ ddns6
 
 Cisco EEM TCL script to update your router's AAAA dynamic DNS record (with freedns.afraid.org)
 
-Add this to your Event Manager configuration:
+Add this to your Event Manager configuration. Replace interface name.
 ```
   !
   event manager policy afraid6.tcl type user
