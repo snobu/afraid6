@@ -41,7 +41,7 @@ ipv4.example.org in 0.041 seconds
 
 "I honestly forgot why i'm here. Care to remind me?"
 
-Just relax, all this will become obsolete when freedns.afraid.org will be reachable over v6.
+Just relax, all this will become obsolete when <b>freedns.afraid.org</b> will become reachable over v6.
 Then you'll only need to "GET" the secret update URL, just like you do for your dynamic A record on v4.
 
 ```
