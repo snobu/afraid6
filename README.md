@@ -38,8 +38,8 @@ event manager directory user policy "flash:/"
 ipv4.example.org in 0.041 seconds
 ```
 
-"Remind me again why i need all this mess on my hands?"
-Relax, all this will become obsolete when freedns.afraid.org will be reachable over v6. Then you'll only need to "GET" the secret update URL.
+"I honestly forgot why i'm here. Remind me again?"
+Just relax, all this will become obsolete when freedns.afraid.org will be reachable over v6. Then you'll only need to "GET" the secret update URL, just like you do for your dynamic A record on v4.
 
 ```
 No quad-A record yet.
