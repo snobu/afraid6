@@ -10,7 +10,7 @@ By default afraid.org will also update your A record in one go.
 set int "Dialer0"
 [..]
 # Your "secret" update URL
-set url "http://freedns.afraid.org/dynamic/update.php?HERE_GOES_YOUR_BASE64_SECRET==&address=$v6addr"
+set url "http://freedns.afraid.org/dynamic/update.php?YOUR_BASE64_SECRET==&address=$v6addr"
 ```
 
 2. Copy <b>afraid6.tcl</b> to your router's flash in the location specified by this line in your configuration:
