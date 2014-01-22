@@ -25,5 +25,6 @@ event manager directory user policy "flash:/"
 .Jan 22 16:01:55: %HA_EM-6-LOG: afraid6.tcl: Looking for this router's global unicast IPv6 address...
 .Jan 22 16:01:55: %HA_EM-6-LOG: afraid6.tcl: Global unicast v6 is: 2A02:2F0B:203F:FFFF::BC1A:B345 (Dialer0)
 .Jan 22 16:01:55: %HA_EM-6-LOG: afraid6.tcl: Updating AAAA record on freedns.afraid.org...
-.Jan 22 16:01:56: %HA_EM-6-LOG: afraid6.tcl: freedns.afraid.org DDNS response: Updated 2 host(s) ipv6.example.org, ipv4.example.org 69 in 0.041 seconds
+.Jan 22 16:01:56: %HA_EM-6-LOG: afraid6.tcl: freedns.afraid.org DDNS response: Updated 2 host(s) ipv6.example.org,
+ipv4.example.org 69 in 0.041 seconds
 ```
