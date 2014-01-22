@@ -9,7 +9,7 @@ By default afraid.org will also update your A record in one go.
 # You can use short interface names (Fa0, Gi0/1, Di0) for $int
 set int "Dialer0"
 [..]
-# DNS record update "secret" URL
+# Your "secret" update URL
 set url "http://freedns.afraid.org/dynamic/update.php?HERE_GOES_YOUR_BASE64_SECRET==&address=$v6addr"
 ```
 
