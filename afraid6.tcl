@@ -1,5 +1,6 @@
 # afraid6.tcl
-# Updates your dynamic AAAA record in freedns.afraid.org
+# Updates your dynamic AAAA record in freedns.afraid.org.
+# Should work with any decent DDNS provider that supports quad-A with very few code changes.
 # Tested on Embedded Event Manager Version 3.00 (Cisco IOS 12.4(24)T8)
 
 ::cisco::eem::event_register_none maxrun 15 queue_priority low nice 0
@@ -10,7 +11,7 @@ namespace import ::cisco::lib::*
 # -- Set vars here --
 # You can use short interface names (Fa0, Gi0/1, Di0) for $int
 set int "Dialer0"
-# Also update the set url "" statement a few lines below
+# Also update the set url "" statement a few lines below with your own base64 string
 
 puts stdout "Looking for this router's global unicast IPv6 address..."
 # Open CLI
