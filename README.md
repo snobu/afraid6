@@ -4,12 +4,21 @@ afraid6.tcl
 Cisco EEM TCL script to update your router's AAAA dynamic DNS record with freedns.afraid.org.
 By default afraid.org will also update your A record in one go.
 
-1. Copy afraid6.tcl to your router's flash in the location specified by this line in your configuration:
+1. Open <b>afraid6.tcl</b> and replace these two vars:
+```
+# You can use short interface names (Fa0, Gi0/1, Di0) for $int
+set int "Dialer0"
+[..]
+# DNS record update "secret" URL
+set url "http://freedns.afraid.org/dynamic/update.php?base64HashHashHash==&address=$v6addr"
+```
+
+2. Copy <b>afraid6.tcl</b> to your router's flash in the location specified by this line in your configuration:
 ```
 event manager directory user policy "flash:/"
 ````
 
-2. Add this to your Event Manager section. Replace interface name if you're not using PPP-over-whatnot.
+3. Add this to your Event Manager section. Replace interface name if you're not using PPP-over-whatnot.
 ```
   !
   event manager policy afraid6.tcl type user
@@ -20,7 +29,7 @@ event manager directory user policy "flash:/"
   !
 ```
 
-3. Test by doing a "shut/no shut" on the interface connected to the Internet. "show log" should come up with good news.
+4. Test by doing a "shut/no shut" on the interface connected to the Internet. <b>"show log"</b> should come up with good news.
 ```
 .Jan 22 16:01:55: %HA_EM-6-LOG: afraid6.tcl: Looking for this router's global unicast IPv6 address...
 .Jan 22 16:01:55: %HA_EM-6-LOG: afraid6.tcl: Global unicast v6 is: 2A02:2F0B:203F:FFFF::BC1A:B345 (Dialer0)
