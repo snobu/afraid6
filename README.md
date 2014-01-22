@@ -1,7 +1,7 @@
 afraid6.tcl
 ===========
 
-Cisco EEM TCL script to update your router's AAAA dynamic DNS record with freedns.afraid.org.
+Cisco EEM TCL script to update your router's AAAA dynamic DNS record with <b>freedns.afraid.org</b>.
 By default afraid.org will also update your A record in one go.
 
 1. Open <b>afraid6.tcl</b> and replace these two vars:
