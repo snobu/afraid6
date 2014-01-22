@@ -38,6 +38,7 @@ event manager directory user policy "flash:/"
 ipv4.example.org in 0.041 seconds
 ```
 
+
 "I honestly forgot why i'm here. Remind me again?"
 
 Just relax, all this will become obsolete when freedns.afraid.org will be reachable over v6.
