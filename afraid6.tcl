@@ -24,8 +24,8 @@ regexp {Global unicast.*subnet{1}} $clioutput x
 regexp {(([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{1,4})} $x v6addr
 puts stdout "Global unicast v6 is: $v6addr ($int)"
 
-# Your "secret" update URL
-set url "http://freedns.afraid.org/dynamic/update.php?HERE_GOES_YOUR_BASE64_SECRET==&address=$v6addr"
+# Your "secret" update URL. Replace "YOUR_BASE64_SECRET==".
+set url "http://freedns.afraid.org/dynamic/update.php?YOUR_BASE64_SECRET==&address=$v6addr"
 
 puts stdout "Updating AAAA record on freedns.afraid.org..."
 puts $url
