@@ -13,7 +13,7 @@ namespace import ::cisco::lib::*
 set int "Dialer0"
 # Also update the set url "" statement a few lines below with your own base64 string
 
-puts stdout "Looking for this router's global unicast IPv6 address..."
+action_syslog msg "Looking for this router's global unicast IPv6 address..."
 # Open CLI
 if [catch {cli_open} result] {error $result $errorInfo} else {array set cli $result}
 # Enable
@@ -22,17 +22,17 @@ if [catch {cli_exec $cli(fd) "enable"} result] {error $result $errorInfo}
 if [catch {cli_exec $cli(fd) "show ipv6 interface $int"} result] {error $result $errorInfo} else {set clioutput $result}
 regexp {Global unicast.*subnet{1}} $clioutput x
 regexp {(([0-9a-fA-F]{0,4}:){1,7}[0-9a-fA-F]{1,4})} $x v6addr
-puts stdout "Global unicast v6 is: $v6addr ($int)"
+action_syslog msg "Global unicast v6 is: $v6addr ($int)"
 
 # Your "secret" update URL. Replace "YOUR_BASE64_SECRET==".
 set url "http://freedns.afraid.org/dynamic/update.php?YOUR_BASE64_SECRET==&address=$v6addr"
 
-puts stdout "Updating AAAA record on freedns.afraid.org..."
+action_syslog msg "Updating AAAA record on freedns.afraid.org..."
 puts $url
 if {[catch {http::geturl $url -queryblocksize 50 -type "text/plain" } token]} {
-        puts stdout "DDNS update failed. Can't get to URL. Maybe ip domain-lookup is turned off?"
+        action_syslog msg "DDNS update failed. Can't get to URL. Maybe ip domain-lookup is turned off?"
 } else {
-        puts stdout "freedns.afraid.org DDNS response: [http::data $token]"
+        action_syslog msg "freedns.afraid.org DDNS response: [http::data $token]"
         }
 
 exit 0
